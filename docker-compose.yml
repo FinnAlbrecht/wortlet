@@ -1,0 +1,23 @@
+# Startet die ganze App mit einem Befehl:  docker compose up --build
+# Danach: http://localhost:8080
+# Geheimnisse (OpenRouter-Schlüssel, JWT-Schlüssel) kommen aus einer Datei .env neben dieser Datei (siehe .env.example).
+services:
+  app:
+    build: .
+    image: wortlet:latest
+    ports:
+      - "8080:8080"
+    environment:
+      OpenRouter__ApiKey: ${OPENROUTER_API_KEY:-}
+      OpenRouter__Model: ${OPENROUTER_MODEL:-google/gemma-4-31b-it:free}
+      OpenRouter__Referer: ${PUBLIC_URL:-http://localhost:8080}
+      Jwt__Key: ${JWT_KEY:-}
+      Recognition__DailyLimitPerUser: ${PHOTOS_PER_DAY:-30}
+    volumes:
+      - wortlet-data:/data
+      - wortlet-backups:/backups   # automatische Sicherungen, getrennt von den Daten
+    restart: unless-stopped
+
+volumes:
+  wortlet-data:
+  wortlet-backups:

@@ -1,0 +1,2049 @@
+{
+ "language": {
+  "name": "Englisch",
+  "code": "en"
+ },
+ "folder": {
+  "name": "Einkaufen & Ernährung",
+  "description": "Seiten 201–225",
+  "oldLabel": "Alte Wörter (S. 201–215)",
+  "newLabel": "Neue Wörter (S. 216–225)",
+  "chapters": [
+   {
+    "name": "Einkaufen & Geschäfte",
+    "pages": "S. 201–207",
+    "isNew": false,
+    "words": [
+     {
+      "de": "vollständig",
+      "answers": [
+       "complete"
+      ]
+     },
+     {
+      "de": "ausverkauft",
+      "answers": [
+       "sold out"
+      ]
+     },
+     {
+      "de": "der Preis",
+      "answers": [
+       "price"
+      ]
+     },
+     {
+      "de": "Was kostet …?",
+      "answers": [
+       "how much is ...?"
+      ]
+     },
+     {
+      "de": "teuer",
+      "answers": [
+       "expensive"
+      ]
+     },
+     {
+      "de": "billig",
+      "answers": [
+       "cheap"
+      ]
+     },
+     {
+      "de": "günstig, preiswert",
+      "answers": [
+       "reasonably priced"
+      ]
+     },
+     {
+      "de": "die Kasse",
+      "answers": [
+       "checkout",
+       "cash desk",
+       "till"
+      ],
+      "hint": "3 Wörter im Buch, eines reicht"
+     },
+     {
+      "de": "ausgeben (Geld)",
+      "answers": [
+       "to spend"
+      ]
+     },
+     {
+      "de": "kosten",
+      "answers": [
+       "to cost"
+      ]
+     },
+     {
+      "de": "die Reklamation",
+      "answers": [
+       "complaint"
+      ]
+     },
+     {
+      "de": "reklamieren",
+      "answers": [
+       "to query",
+       "to take sth. back"
+      ],
+      "hint": "2 Möglichkeiten"
+     },
+     {
+      "de": "zufrieden",
+      "answers": [
+       "satisfied"
+      ]
+     },
+     {
+      "de": "unzufrieden",
+      "answers": [
+       "dissatisfied"
+      ]
+     },
+     {
+      "de": "umtauschen",
+      "answers": [
+       "to exchange"
+      ]
+     },
+     {
+      "de": "bei j-m kassieren",
+      "answers": [
+       "to give sb. his/her bill",
+       "to give sb. his bill",
+       "to give sb. her bill"
+      ]
+     },
+     {
+      "de": "j-m sein Geld zurückgeben",
+      "answers": [
+       "to refund one's money"
+      ]
+     },
+     {
+      "de": "passend (Kleingeld)",
+      "answers": [
+       "exact"
+      ]
+     },
+     {
+      "de": "das Wechselgeld, das Kleingeld",
+      "answers": [
+       "change"
+      ]
+     },
+     {
+      "de": "der Kassenzettel, die Quittung, der Beleg",
+      "answers": [
+       "receipt"
+      ]
+     },
+     {
+      "de": "die Warteschlange",
+      "answers": [
+       "queue",
+       "line"
+      ]
+     },
+     {
+      "de": "anstehen",
+      "answers": [
+       "to queue",
+       "to stand in line"
+      ]
+     },
+     {
+      "de": "an der Reihe sein",
+      "answers": [
+       "to be one's turn"
+      ]
+     },
+     {
+      "de": "die Einkaufstasche",
+      "answers": [
+       "shopping bag"
+      ]
+     },
+     {
+      "de": "der Einkaufszettel",
+      "answers": [
+       "shopping list"
+      ]
+     },
+     {
+      "de": "der Kunde, die Kundin",
+      "answers": [
+       "customer"
+      ]
+     },
+     {
+      "de": "der Einkaufsbummel",
+      "answers": [
+       "shopping expedition"
+      ]
+     },
+     {
+      "de": "Einkäufe erledigen",
+      "answers": [
+       "to do the shopping"
+      ]
+     },
+     {
+      "de": "die Auswahl",
+      "answers": [
+       "choice"
+      ]
+     },
+     {
+      "de": "die Abteilung",
+      "answers": [
+       "department"
+      ]
+     },
+     {
+      "de": "das Modell",
+      "answers": [
+       "model"
+      ]
+     },
+     {
+      "de": "vorrätig",
+      "answers": [
+       "in stock"
+      ]
+     },
+     {
+      "de": "erhältlich",
+      "answers": [
+       "available"
+      ]
+     },
+     {
+      "de": "der Luxus",
+      "answers": [
+       "luxury"
+      ]
+     },
+     {
+      "de": "die Kosten",
+      "answers": [
+       "costs"
+      ]
+     },
+     {
+      "de": "sich leisten (sich gönnen)",
+      "answers": [
+       "to treat oneself to"
+      ]
+     },
+     {
+      "de": "sich etw. leisten (können)",
+      "answers": [
+       "to afford sth."
+      ]
+     },
+     {
+      "de": "das Schnäppchen",
+      "answers": [
+       "bargain"
+      ]
+     },
+     {
+      "de": "das Sonderangebot",
+      "answers": [
+       "special offer"
+      ]
+     },
+     {
+      "de": "der Rabatt",
+      "answers": [
+       "discount"
+      ]
+     },
+     {
+      "de": "reduzieren",
+      "answers": [
+       "to reduce"
+      ]
+     },
+     {
+      "de": "kostenlos, gratis",
+      "answers": [
+       "free"
+      ]
+     },
+     {
+      "de": "das Schaufenster",
+      "answers": [
+       "shop window"
+      ]
+     },
+     {
+      "de": "der Einkaufswagen",
+      "answers": [
+       "trolley",
+       "shopping trolley",
+       "cart",
+       "shopping cart"
+      ]
+     },
+     {
+      "de": "die Rolltreppe",
+      "answers": [
+       "escalator"
+      ]
+     },
+     {
+      "de": "das Geschäft, der Laden",
+      "answers": [
+       "shop"
+      ]
+     },
+     {
+      "de": "das Geschäft, das Warenhaus",
+      "answers": [
+       "store"
+      ]
+     },
+     {
+      "de": "das Kaufhaus",
+      "answers": [
+       "department store"
+      ]
+     },
+     {
+      "de": "der Supermarkt",
+      "answers": [
+       "supermarket"
+      ]
+     },
+     {
+      "de": "das Lebensmittelgeschäft",
+      "answers": [
+       "grocer's",
+       "grocery store"
+      ]
+     },
+     {
+      "de": "der Markt",
+      "answers": [
+       "market"
+      ]
+     },
+     {
+      "de": "die Bäckerei",
+      "answers": [
+       "bakery"
+      ]
+     },
+     {
+      "de": "die Metzgerei",
+      "answers": [
+       "butcher's",
+       "butcher's shop"
+      ]
+     },
+     {
+      "de": "der Obst- und Gemüseladen",
+      "answers": [
+       "greengrocer's"
+      ]
+     },
+     {
+      "de": "der Tabakladen",
+      "answers": [
+       "tobacconist's",
+       "tobacco store"
+      ]
+     },
+     {
+      "de": "das Schuhgeschäft",
+      "answers": [
+       "shoe shop",
+       "shoe store"
+      ]
+     },
+     {
+      "de": "die Buchhandlung",
+      "answers": [
+       "bookshop",
+       "bookstore"
+      ]
+     },
+     {
+      "de": "das Bekleidungsgeschäft",
+      "answers": [
+       "clothes shop",
+       "clothes store"
+      ]
+     },
+     {
+      "de": "die Boutique",
+      "answers": [
+       "boutique"
+      ]
+     },
+     {
+      "de": "die Drogerie",
+      "answers": [
+       "chemist's",
+       "drugstore"
+      ]
+     },
+     {
+      "de": "das Einkaufszentrum",
+      "answers": [
+       "shopping centre",
+       "shopping mall",
+       "mall"
+      ]
+     },
+     {
+      "de": "das Fischgeschäft",
+      "answers": [
+       "fishmonger's"
+      ]
+     },
+     {
+      "de": "der Blumenladen",
+      "answers": [
+       "florist's"
+      ]
+     },
+     {
+      "de": "der Juwelier",
+      "answers": [
+       "jeweller",
+       "jeweler"
+      ]
+     },
+     {
+      "de": "das Sportgeschäft",
+      "answers": [
+       "sports shop",
+       "sports store"
+      ]
+     },
+     {
+      "de": "die Reinigung",
+      "answers": [
+       "dry cleaner's"
+      ]
+     },
+     {
+      "de": "die Elektrohandlung",
+      "answers": [
+       "electrical shop",
+       "electrical store"
+      ]
+     },
+     {
+      "de": "der Andenkenladen",
+      "answers": [
+       "souvenir shop",
+       "souvenir store"
+      ]
+     },
+     {
+      "de": "der Kiosk",
+      "answers": [
+       "kiosk"
+      ]
+     },
+     {
+      "de": "das Fotogeschäft",
+      "answers": [
+       "photographic shop",
+       "photographic store"
+      ]
+     },
+     {
+      "de": "der Optiker",
+      "answers": [
+       "optician's"
+      ]
+     },
+     {
+      "de": "das Schreibwarengeschäft",
+      "answers": [
+       "stationer's",
+       "stationery store"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Essen, Kochen & Grundnahrungsmittel",
+    "pages": "S. 208–215",
+    "isNew": false,
+    "words": [
+     {
+      "de": "das Nahrungsmittel, das Lebensmittel",
+      "answers": [
+       "food"
+      ]
+     },
+     {
+      "de": "essen",
+      "answers": [
+       "to eat"
+      ]
+     },
+     {
+      "de": "der Hunger",
+      "answers": [
+       "hunger"
+      ]
+     },
+     {
+      "de": "hungrig",
+      "answers": [
+       "hungry"
+      ]
+     },
+     {
+      "de": "trinken",
+      "answers": [
+       "to drink"
+      ]
+     },
+     {
+      "de": "der Durst",
+      "answers": [
+       "thirst"
+      ]
+     },
+     {
+      "de": "durstig",
+      "answers": [
+       "thirsty"
+      ]
+     },
+     {
+      "de": "der Appetit",
+      "answers": [
+       "appetite"
+      ]
+     },
+     {
+      "de": "die Mahlzeit",
+      "answers": [
+       "meal"
+      ]
+     },
+     {
+      "de": "Guten Appetit!",
+      "answers": [
+       "enjoy your meal!"
+      ]
+     },
+     {
+      "de": "Prost!",
+      "answers": [
+       "cheers!"
+      ]
+     },
+     {
+      "de": "schmecken",
+      "answers": [
+       "to taste"
+      ]
+     },
+     {
+      "de": "köstlich",
+      "answers": [
+       "delicious"
+      ]
+     },
+     {
+      "de": "frisch",
+      "answers": [
+       "fresh"
+      ]
+     },
+     {
+      "de": "süß",
+      "answers": [
+       "sweet"
+      ]
+     },
+     {
+      "de": "sauer",
+      "answers": [
+       "sour"
+      ]
+     },
+     {
+      "de": "salzig",
+      "answers": [
+       "salty"
+      ]
+     },
+     {
+      "de": "scharf (sehr scharf, z. B. Thai-Essen)",
+      "answers": [
+       "hot"
+      ]
+     },
+     {
+      "de": "scharf, würzig",
+      "answers": [
+       "spicy"
+      ]
+     },
+     {
+      "de": "die Flasche",
+      "answers": [
+       "bottle"
+      ]
+     },
+     {
+      "de": "gar, gekocht",
+      "answers": [
+       "cooked"
+      ]
+     },
+     {
+      "de": "kochen (Essen machen)",
+      "answers": [
+       "to cook"
+      ]
+     },
+     {
+      "de": "kochen (Wasser)",
+      "answers": [
+       "to boil"
+      ]
+     },
+     {
+      "de": "zubereiten",
+      "answers": [
+       "to make"
+      ]
+     },
+     {
+      "de": "hart gekocht",
+      "answers": [
+       "hard-boiled"
+      ]
+     },
+     {
+      "de": "roh",
+      "answers": [
+       "raw"
+      ]
+     },
+     {
+      "de": "backen (Kuchen, Brot)",
+      "answers": [
+       "to bake"
+      ]
+     },
+     {
+      "de": "backen (Fleisch im Ofen)",
+      "answers": [
+       "to roast"
+      ]
+     },
+     {
+      "de": "(Salat) anmachen",
+      "answers": [
+       "to dress"
+      ]
+     },
+     {
+      "de": "warm machen",
+      "answers": [
+       "to warm up"
+      ]
+     },
+     {
+      "de": "schneiden",
+      "answers": [
+       "to cut"
+      ]
+     },
+     {
+      "de": "tiefgekühlt, Tiefkühl-",
+      "answers": [
+       "frozen"
+      ]
+     },
+     {
+      "de": "die Scheibe",
+      "answers": [
+       "slice"
+      ]
+     },
+     {
+      "de": "der Tropfen",
+      "answers": [
+       "drop"
+      ]
+     },
+     {
+      "de": "die Ernährung, die Diät",
+      "answers": [
+       "diet"
+      ]
+     },
+     {
+      "de": "verzehren, zu sich nehmen",
+      "answers": [
+       "to consume"
+      ]
+     },
+     {
+      "de": "(herunter)schlucken",
+      "answers": [
+       "to swallow"
+      ]
+     },
+     {
+      "de": "der Geschmack",
+      "answers": [
+       "taste"
+      ]
+     },
+     {
+      "de": "vorzüglich",
+      "answers": [
+       "excellent"
+      ]
+     },
+     {
+      "de": "braten (in der Pfanne)",
+      "answers": [
+       "to fry"
+      ]
+     },
+     {
+      "de": "grillen",
+      "answers": [
+       "to grill",
+       "to broil"
+      ]
+     },
+     {
+      "de": "frittieren",
+      "answers": [
+       "to deep-fry"
+      ]
+     },
+     {
+      "de": "die Packung",
+      "answers": [
+       "packet",
+       "package"
+      ]
+     },
+     {
+      "de": "die Dose",
+      "answers": [
+       "can",
+       "tin"
+      ]
+     },
+     {
+      "de": "die Tüte, der Beutel",
+      "answers": [
+       "bag"
+      ]
+     },
+     {
+      "de": "lagern",
+      "answers": [
+       "to store"
+      ]
+     },
+     {
+      "de": "verderben",
+      "answers": [
+       "to go bad",
+       "to go off"
+      ]
+     },
+     {
+      "de": "reif",
+      "answers": [
+       "ripe"
+      ]
+     },
+     {
+      "de": "bitter",
+      "answers": [
+       "bitter"
+      ]
+     },
+     {
+      "de": "trocken",
+      "answers": [
+       "dry"
+      ]
+     },
+     {
+      "de": "frisch gepresst",
+      "answers": [
+       "freshly-squeezed"
+      ]
+     },
+     {
+      "de": "gerieben",
+      "answers": [
+       "grated"
+      ]
+     },
+     {
+      "de": "die Reformkost",
+      "answers": [
+       "health food"
+      ]
+     },
+     {
+      "de": "vegan",
+      "answers": [
+       "vegan"
+      ]
+     },
+     {
+      "de": "der Vegetarier, die Vegetarierin",
+      "answers": [
+       "vegetarian"
+      ]
+     },
+     {
+      "de": "vegetarisch",
+      "answers": [
+       "vegetarian"
+      ]
+     },
+     {
+      "de": "Vollkorn-",
+      "answers": [
+       "wholegrain"
+      ]
+     },
+     {
+      "de": "die Vollwertkost",
+      "answers": [
+       "wholefoods"
+      ]
+     },
+     {
+      "de": "das Fett",
+      "answers": [
+       "fat"
+      ]
+     },
+     {
+      "de": "fettarm",
+      "answers": [
+       "low-fat"
+      ]
+     },
+     {
+      "de": "mager",
+      "answers": [
+       "lean"
+      ]
+     },
+     {
+      "de": "das Vitamin",
+      "answers": [
+       "vitamin"
+      ]
+     },
+     {
+      "de": "das Rezept",
+      "answers": [
+       "recipe"
+      ]
+     },
+     {
+      "de": "würzen",
+      "answers": [
+       "to season"
+      ]
+     },
+     {
+      "de": "hinzufügen",
+      "answers": [
+       "to add"
+      ]
+     },
+     {
+      "de": "verschütten",
+      "answers": [
+       "to spill"
+      ]
+     },
+     {
+      "de": "die Schale (z. B. Kartoffel)",
+      "answers": [
+       "peeling"
+      ]
+     },
+     {
+      "de": "schälen",
+      "answers": [
+       "to peel"
+      ]
+     },
+     {
+      "de": "picknicken, ein Picknick veranstalten",
+      "answers": [
+       "to have a picnic"
+      ]
+     },
+     {
+      "de": "das Brot",
+      "answers": [
+       "bread"
+      ]
+     },
+     {
+      "de": "das Brötchen",
+      "answers": [
+       "roll"
+      ]
+     },
+     {
+      "de": "das süße Brötchen",
+      "answers": [
+       "bun"
+      ]
+     },
+     {
+      "de": "der Toast",
+      "answers": [
+       "toast"
+      ]
+     },
+     {
+      "de": "die Nudeln",
+      "answers": [
+       "noodles",
+       "pasta"
+      ]
+     },
+     {
+      "de": "der Reis",
+      "answers": [
+       "rice"
+      ]
+     },
+     {
+      "de": "der Kuchen",
+      "answers": [
+       "cake"
+      ]
+     },
+     {
+      "de": "die Torte",
+      "answers": [
+       "gateau"
+      ]
+     },
+     {
+      "de": "der Keks",
+      "answers": [
+       "biscuit",
+       "cookie"
+      ]
+     },
+     {
+      "de": "der Muffin",
+      "answers": [
+       "muffin"
+      ]
+     },
+     {
+      "de": "das Mehl",
+      "answers": [
+       "flour"
+      ]
+     },
+     {
+      "de": "das Weißbrot",
+      "answers": [
+       "white bread"
+      ]
+     },
+     {
+      "de": "das Graubrot",
+      "answers": [
+       "brown bread"
+      ]
+     },
+     {
+      "de": "die Zerealien",
+      "answers": [
+       "cereals"
+      ]
+     },
+     {
+      "de": "das Müsli",
+      "answers": [
+       "muesli"
+      ]
+     },
+     {
+      "de": "kleines süßes Brötchen (britisch)",
+      "answers": [
+       "scone"
+      ]
+     },
+     {
+      "de": "der Krapfen, der Donut",
+      "answers": [
+       "doughnut"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Obst und Gemüse",
+    "pages": "S. 216–217",
+    "isNew": true,
+    "words": [
+     {
+      "de": "der Salat",
+      "answers": [
+       "salad"
+      ]
+     },
+     {
+      "de": "die Kartoffel",
+      "answers": [
+       "potato"
+      ]
+     },
+     {
+      "de": "der Mais",
+      "answers": [
+       "sweetcorn"
+      ]
+     },
+     {
+      "de": "das Gemüse",
+      "answers": [
+       "vegetable"
+      ]
+     },
+     {
+      "de": "die Tomate",
+      "answers": [
+       "tomato"
+      ]
+     },
+     {
+      "de": "die Mohrrübe",
+      "answers": [
+       "carrot"
+      ]
+     },
+     {
+      "de": "die Olive",
+      "answers": [
+       "olive"
+      ]
+     },
+     {
+      "de": "die Erbse",
+      "answers": [
+       "pea"
+      ]
+     },
+     {
+      "de": "die Gurke",
+      "answers": [
+       "cucumber"
+      ]
+     },
+     {
+      "de": "die Paprika",
+      "answers": [
+       "pepper"
+      ]
+     },
+     {
+      "de": "das Sauerkraut",
+      "answers": [
+       "sauerkraut"
+      ]
+     },
+     {
+      "de": "der Pfirsich",
+      "answers": [
+       "peach"
+      ]
+     },
+     {
+      "de": "das Obst, die Frucht",
+      "answers": [
+       "fruit"
+      ]
+     },
+     {
+      "de": "der Apfel",
+      "answers": [
+       "apple"
+      ]
+     },
+     {
+      "de": "die Birne",
+      "answers": [
+       "pear"
+      ]
+     },
+     {
+      "de": "die Orange",
+      "answers": [
+       "orange"
+      ]
+     },
+     {
+      "de": "die Kirsche",
+      "answers": [
+       "cherry"
+      ]
+     },
+     {
+      "de": "die Erdbeere",
+      "answers": [
+       "strawberry"
+      ]
+     },
+     {
+      "de": "die Banane",
+      "answers": [
+       "banana"
+      ]
+     },
+     {
+      "de": "die Zitrone",
+      "answers": [
+       "lemon"
+      ]
+     },
+     {
+      "de": "die Limone",
+      "answers": [
+       "lime"
+      ]
+     },
+     {
+      "de": "die Ananas",
+      "answers": [
+       "pineapple"
+      ]
+     },
+     {
+      "de": "die Zwiebel",
+      "answers": [
+       "onion"
+      ]
+     },
+     {
+      "de": "der Knoblauch",
+      "answers": [
+       "garlic"
+      ]
+     },
+     {
+      "de": "die weiße Bohne",
+      "answers": [
+       "haricot bean"
+      ]
+     },
+     {
+      "de": "die Kichererbse",
+      "answers": [
+       "chickpea"
+      ]
+     },
+     {
+      "de": "die Bohne",
+      "answers": [
+       "bean"
+      ]
+     },
+     {
+      "de": "der Spinat",
+      "answers": [
+       "spinach"
+      ]
+     },
+     {
+      "de": "die Hülsenfrucht",
+      "answers": [
+       "legume"
+      ]
+     },
+     {
+      "de": "die Aubergine",
+      "answers": [
+       "aubergine",
+       "eggplant"
+      ]
+     },
+     {
+      "de": "die Zucchini",
+      "answers": [
+       "courgette",
+       "zucchini"
+      ]
+     },
+     {
+      "de": "der Kohl",
+      "answers": [
+       "cabbage"
+      ]
+     },
+     {
+      "de": "die Aprikose",
+      "answers": [
+       "apricot"
+      ]
+     },
+     {
+      "de": "die Traube",
+      "answers": [
+       "grape"
+      ]
+     },
+     {
+      "de": "die Nuss",
+      "answers": [
+       "nut"
+      ]
+     },
+     {
+      "de": "die Erdnuss",
+      "answers": [
+       "peanut"
+      ]
+     },
+     {
+      "de": "die Walnuss",
+      "answers": [
+       "walnut"
+      ]
+     },
+     {
+      "de": "die Mandel",
+      "answers": [
+       "almond"
+      ]
+     },
+     {
+      "de": "die Melone",
+      "answers": [
+       "melon"
+      ]
+     },
+     {
+      "de": "die Honigmelone",
+      "answers": [
+       "honeydew melon"
+      ]
+     },
+     {
+      "de": "die Wassermelone",
+      "answers": [
+       "watermelon"
+      ]
+     },
+     {
+      "de": "die Grapefruit, die Pampelmuse",
+      "answers": [
+       "grapefruit"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Fleisch, Fisch und Milchprodukte",
+    "pages": "S. 217–219",
+    "isNew": true,
+    "words": [
+     {
+      "de": "das Fleisch",
+      "answers": [
+       "meat"
+      ]
+     },
+     {
+      "de": "das Schweinefleisch",
+      "answers": [
+       "pork"
+      ]
+     },
+     {
+      "de": "das Rindfleisch",
+      "answers": [
+       "beef"
+      ]
+     },
+     {
+      "de": "das Kalbfleisch",
+      "answers": [
+       "veal"
+      ]
+     },
+     {
+      "de": "das Hühnchen",
+      "answers": [
+       "chicken"
+      ]
+     },
+     {
+      "de": "das Steak",
+      "answers": [
+       "steak"
+      ]
+     },
+     {
+      "de": "der Flügel",
+      "answers": [
+       "wing"
+      ]
+     },
+     {
+      "de": "die Keule",
+      "answers": [
+       "leg"
+      ],
+      "hint": "allgemeines Wort, nicht für Geflügel"
+     },
+     {
+      "de": "das Würstchen",
+      "answers": [
+       "sausage"
+      ]
+     },
+     {
+      "de": "der Schinken",
+      "answers": [
+       "ham"
+      ]
+     },
+     {
+      "de": "die Salami",
+      "answers": [
+       "salami"
+      ]
+     },
+     {
+      "de": "der Speck",
+      "answers": [
+       "bacon"
+      ]
+     },
+     {
+      "de": "der Fisch",
+      "answers": [
+       "fish"
+      ]
+     },
+     {
+      "de": "der Thunfisch",
+      "answers": [
+       "tuna"
+      ]
+     },
+     {
+      "de": "der Lachs",
+      "answers": [
+       "salmon"
+      ]
+     },
+     {
+      "de": "der Schellfisch",
+      "answers": [
+       "haddock"
+      ]
+     },
+     {
+      "de": "der Kabeljau",
+      "answers": [
+       "cod"
+      ]
+     },
+     {
+      "de": "die Garnele",
+      "answers": [
+       "prawn"
+      ]
+     },
+     {
+      "de": "die Milch",
+      "answers": [
+       "milk"
+      ]
+     },
+     {
+      "de": "die Butter",
+      "answers": [
+       "butter"
+      ]
+     },
+     {
+      "de": "die Sahne",
+      "answers": [
+       "cream"
+      ]
+     },
+     {
+      "de": "der Käse",
+      "answers": [
+       "cheese"
+      ]
+     },
+     {
+      "de": "das Lammfleisch",
+      "answers": [
+       "lamb"
+      ]
+     },
+     {
+      "de": "die Pute",
+      "answers": [
+       "turkey"
+      ]
+     },
+     {
+      "de": "das Kotelett",
+      "answers": [
+       "chop",
+       "cutlet"
+      ],
+      "hint": "2 Wörter im Buch, eines reicht"
+     },
+     {
+      "de": "der Aufschnitt",
+      "answers": [
+       "cold cuts"
+      ]
+     },
+     {
+      "de": "die Meeresfrüchte",
+      "answers": [
+       "seafood"
+      ]
+     },
+     {
+      "de": "die Gräte",
+      "answers": [
+       "bone"
+      ]
+     },
+     {
+      "de": "der Rahm",
+      "answers": [
+       "cream"
+      ]
+     },
+     {
+      "de": "der Joghurt",
+      "answers": [
+       "yoghurt"
+      ]
+     },
+     {
+      "de": "der Quark",
+      "answers": [
+       "quark"
+      ]
+     },
+     {
+      "de": "der Frischkäse",
+      "answers": [
+       "cream cheese"
+      ]
+     },
+     {
+      "de": "die Buttermilch",
+      "answers": [
+       "buttermilk"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Gewürze, Kräuter und Zutaten",
+    "pages": "S. 219",
+    "isNew": true,
+    "words": [
+     {
+      "de": "das Salz",
+      "answers": [
+       "salt"
+      ]
+     },
+     {
+      "de": "der Pfeffer",
+      "answers": [
+       "pepper"
+      ]
+     },
+     {
+      "de": "der Essig",
+      "answers": [
+       "vinegar"
+      ]
+     },
+     {
+      "de": "das Öl",
+      "answers": [
+       "oil"
+      ]
+     },
+     {
+      "de": "das Ei",
+      "answers": [
+       "egg"
+      ]
+     },
+     {
+      "de": "das Eigelb, der Dotter",
+      "answers": [
+       "(egg) yolk",
+       "egg yolk",
+       "yolk"
+      ]
+     },
+     {
+      "de": "das Eiweiß",
+      "answers": [
+       "egg white"
+      ]
+     },
+     {
+      "de": "das Gewürz",
+      "answers": [
+       "spice"
+      ]
+     },
+     {
+      "de": "das Basilikum",
+      "answers": [
+       "basil"
+      ]
+     },
+     {
+      "de": "der Senf",
+      "answers": [
+       "mustard"
+      ]
+     },
+     {
+      "de": "der Ketchup",
+      "answers": [
+       "ketchup",
+       "catsup"
+      ]
+     },
+     {
+      "de": "die Kräuter",
+      "answers": [
+       "herbs"
+      ]
+     },
+     {
+      "de": "die Margarine",
+      "answers": [
+       "margarine"
+      ]
+     },
+     {
+      "de": "die Soja",
+      "answers": [
+       "soy"
+      ]
+     },
+     {
+      "de": "der Tofu",
+      "answers": [
+       "tofu"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Süßigkeiten, Knabbereien und Genussmittel",
+    "pages": "S. 220",
+    "isNew": true,
+    "words": [
+     {
+      "de": "das Bonbon",
+      "answers": [
+       "sweet",
+       "(piece of) candy",
+       "piece of candy",
+       "candy"
+      ]
+     },
+     {
+      "de": "die Süßigkeiten",
+      "answers": [
+       "sweets",
+       "candy"
+      ]
+     },
+     {
+      "de": "der Zucker",
+      "answers": [
+       "sugar"
+      ]
+     },
+     {
+      "de": "der Honig",
+      "answers": [
+       "honey"
+      ]
+     },
+     {
+      "de": "die Konfitüre",
+      "answers": [
+       "jam"
+      ]
+     },
+     {
+      "de": "die Marmelade (aus Orangen oder Zitronen)",
+      "answers": [
+       "marmalade"
+      ]
+     },
+     {
+      "de": "die Schokolade, die Praline",
+      "answers": [
+       "chocolate"
+      ]
+     },
+     {
+      "de": "die Eiscreme, das Eis",
+      "answers": [
+       "ice cream"
+      ]
+     },
+     {
+      "de": "die Kartoffelchips",
+      "answers": [
+       "crisps",
+       "(potato) chips",
+       "potato chips"
+      ]
+     },
+     {
+      "de": "die Zigarette",
+      "answers": [
+       "cigarette"
+      ]
+     },
+     {
+      "de": "die Knabberei",
+      "answers": [
+       "nibbles"
+      ]
+     },
+     {
+      "de": "der Tabak",
+      "answers": [
+       "tobacco"
+      ]
+     },
+     {
+      "de": "die Pfeife",
+      "answers": [
+       "pipe"
+      ]
+     },
+     {
+      "de": "die Zigarre",
+      "answers": [
+       "cigar"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Getränke",
+    "pages": "S. 221",
+    "isNew": true,
+    "words": [
+     {
+      "de": "der Kaffee",
+      "answers": [
+       "coffee"
+      ]
+     },
+     {
+      "de": "der Espresso",
+      "answers": [
+       "espresso"
+      ]
+     },
+     {
+      "de": "der Cappuccino",
+      "answers": [
+       "cappuccino"
+      ]
+     },
+     {
+      "de": "der Tee",
+      "answers": [
+       "tea"
+      ]
+     },
+     {
+      "de": "das Getränk, der Drink",
+      "answers": [
+       "drink"
+      ]
+     },
+     {
+      "de": "das Mineralwasser",
+      "answers": [
+       "mineral water"
+      ]
+     },
+     {
+      "de": "der Sprudel",
+      "answers": [
+       "sparkling water"
+      ]
+     },
+     {
+      "de": "der Saft",
+      "answers": [
+       "juice"
+      ]
+     },
+     {
+      "de": "die Zitronenlimonade",
+      "answers": [
+       "lemonade"
+      ]
+     },
+     {
+      "de": "die Orangenlimonade",
+      "answers": [
+       "orangeade"
+      ]
+     },
+     {
+      "de": "die (Coca-)Cola",
+      "answers": [
+       "coke",
+       "coke®"
+      ]
+     },
+     {
+      "de": "der Alkohol",
+      "answers": [
+       "alcohol"
+      ]
+     },
+     {
+      "de": "der Wein",
+      "answers": [
+       "wine"
+      ]
+     },
+     {
+      "de": "das Bier",
+      "answers": [
+       "beer"
+      ]
+     },
+     {
+      "de": "das helle Bier",
+      "answers": [
+       "lager"
+      ]
+     },
+     {
+      "de": "der Rotwein",
+      "answers": [
+       "red wine"
+      ]
+     },
+     {
+      "de": "der Weißwein",
+      "answers": [
+       "white wine"
+      ]
+     },
+     {
+      "de": "der Rosé",
+      "answers": [
+       "rosé",
+       "rose"
+      ]
+     },
+     {
+      "de": "der Sekt",
+      "answers": [
+       "sparkling wine"
+      ]
+     },
+     {
+      "de": "der Apfelwein",
+      "answers": [
+       "cider"
+      ]
+     },
+     {
+      "de": "der Eiswürfel",
+      "answers": [
+       "ice cube"
+      ]
+     },
+     {
+      "de": "der Milchkaffee",
+      "answers": [
+       "latte"
+      ]
+     },
+     {
+      "de": "das Erfrischungsgetränk",
+      "answers": [
+       "soft drink"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Restaurant und Café",
+    "pages": "S. 222–223",
+    "isNew": true,
+    "words": [
+     {
+      "de": "das Restaurant, die Gaststätte, das Gasthaus",
+      "answers": [
+       "restaurant"
+      ]
+     },
+     {
+      "de": "das Café",
+      "answers": [
+       "café",
+       "cafe"
+      ]
+     },
+     {
+      "de": "die Pizzeria",
+      "answers": [
+       "pizzeria"
+      ]
+     },
+     {
+      "de": "die Konditorei",
+      "answers": [
+       "cake shop"
+      ]
+     },
+     {
+      "de": "der Pub, die Kneipe",
+      "answers": [
+       "pub"
+      ]
+     },
+     {
+      "de": "die Cafeteria",
+      "answers": [
+       "cafeteria"
+      ]
+     },
+     {
+      "de": "das Selbstbedienungsrestaurant",
+      "answers": [
+       "self-service restaurant"
+      ]
+     },
+     {
+      "de": "die Imbissbude",
+      "answers": [
+       "snack bar"
+      ]
+     },
+     {
+      "de": "der Schnellimbiss",
+      "answers": [
+       "takeaway",
+       "takeout"
+      ]
+     },
+     {
+      "de": "die Bar",
+      "answers": [
+       "bar"
+      ]
+     },
+     {
+      "de": "die Eisdiele",
+      "answers": [
+       "ice cream parlour",
+       "ice cream parlor"
+      ]
+     }
+    ]
+   },
+   {
+    "name": "Gerichte und Snacks",
+    "pages": "S. 223–225",
+    "isNew": true,
+    "words": [
+     {
+      "de": "das Gericht",
+      "answers": [
+       "dish"
+      ]
+     },
+     {
+      "de": "die Spezialität",
+      "answers": [
+       "speciality",
+       "specialty"
+      ]
+     },
+     {
+      "de": "die Pizza",
+      "answers": [
+       "pizza"
+      ]
+     },
+     {
+      "de": "die Suppe",
+      "answers": [
+       "soup"
+      ]
+     },
+     {
+      "de": "das Omelett",
+      "answers": [
+       "omelette"
+      ]
+     },
+     {
+      "de": "der Imbiss",
+      "answers": [
+       "snack"
+      ]
+     },
+     {
+      "de": "der Hamburger",
+      "answers": [
+       "hamburger"
+      ]
+     },
+     {
+      "de": "das Sandwich",
+      "answers": [
+       "sandwich"
+      ]
+     },
+     {
+      "de": "das belegte Brötchen",
+      "answers": [
+       "open sandwich",
+       "open-faced sandwich"
+      ]
+     },
+     {
+      "de": "die Pommes frites",
+      "answers": [
+       "chips",
+       "french fries"
+      ]
+     },
+     {
+      "de": "die Lasagne",
+      "answers": [
+       "lasagne"
+      ]
+     },
+     {
+      "de": "der Braten",
+      "answers": [
+       "roast"
+      ]
+     },
+     {
+      "de": "der Eintopf",
+      "answers": [
+       "stew"
+      ]
+     },
+     {
+      "de": "die Pastete",
+      "answers": [
+       "pasty"
+      ]
+     },
+     {
+      "de": "die Brühe",
+      "answers": [
+       "broth"
+      ]
+     },
+     {
+      "de": "die Soße",
+      "answers": [
+       "sauce"
+      ]
+     },
+     {
+      "de": "die Bratensoße",
+      "answers": [
+       "gravy"
+      ]
+     },
+     {
+      "de": "der Karamellpudding",
+      "answers": [
+       "crème caramel",
+       "creme caramel"
+      ]
+     },
+     {
+      "de": "die Beilage",
+      "answers": [
+       "side dish"
+      ]
+     },
+     {
+      "de": "die gebackenen Bohnen",
+      "answers": [
+       "baked beans"
+      ]
+     },
+     {
+      "de": "die Rösti",
+      "answers": [
+       "hash browns"
+      ]
+     },
+     {
+      "de": "der Pfannkuchen",
+      "answers": [
+       "pancake"
+      ]
+     },
+     {
+      "de": "zum Mitnehmen",
+      "answers": [
+       "to take away",
+       "to go"
+      ],
+      "hint": "2 Möglichkeiten"
+     }
+    ]
+   }
+  ]
+ }
+}

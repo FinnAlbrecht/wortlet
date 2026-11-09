@@ -1,0 +1,45 @@
+name: EF-Core-Migrationen erzeugen
+
+# Manuell starten (Actions → „EF-Core-Migrationen erzeugen“ → Run workflow), wenn sich das Datenmodell geändert hat.
+# Erzeugt die Migration für SQLite und PostgreSQL und committet sie.
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: Name der Migration
+        required: true
+        default: InitialCreate
+
+permissions:
+  contents: write
+
+jobs:
+  migrations:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - run: dotnet tool install --global dotnet-ef --version 10.0.*
+      - run: dotnet build src/Wortlet.Api/Wortlet.Api.csproj
+      - name: SQLite
+        run: >
+          dotnet ef migrations add "${{ inputs.name }}"
+          --project src/Wortlet.Infrastructure --startup-project src/Wortlet.Api
+          --context SqliteAppDbContext --output-dir Persistence/Migrations/Sqlite --no-build
+      - name: PostgreSQL
+        run: >
+          dotnet ef migrations add "${{ inputs.name }}"
+          --project src/Wortlet.Infrastructure --startup-project src/Wortlet.Api
+          --context PostgresAppDbContext --output-dir Persistence/Migrations/Postgres --no-build
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/Wortlet.Infrastructure/Persistence/Migrations
+          git commit -m "Migration ${{ inputs.name }} (SQLite + PostgreSQL)" || echo "Keine Änderungen"
+          git push

@@ -1,0 +1,16 @@
+# Ergänzung für den End-to-End-Test: OpenRouter wird durch eine Attrappe ersetzt.
+#   docker compose -f docker-compose.yml -f e2e/docker-compose.e2e.yml up --build -d
+services:
+  app:
+    environment:
+      OpenRouter__ApiKey: e2e-test-key
+      OpenRouter__BaseUrl: http://mock-openrouter:4010/api/v1
+      RateLimiting__AuthPerMinute: "1000"
+    depends_on:
+      - mock-openrouter
+  mock-openrouter:
+    image: node:22-alpine
+    working_dir: /mock
+    volumes:
+      - ./e2e/mock-openrouter.mjs:/mock/mock-openrouter.mjs:ro
+    command: ["node", "mock-openrouter.mjs"]

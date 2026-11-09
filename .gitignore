@@ -1,0 +1,32 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+
+# Daten und Geheimnisse – niemals einchecken
+data/
+*.db
+*.db-shm
+*.db-wal
+*.key
+.env
+.env.*
+!.env.example
+appsettings.*.local.json
+
+# Node / Vite
+node_modules/
+dist/
+frontend/test-results/
+frontend/playwright-report/
+frontend/blob-report/
+
+# Editoren / System
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

@@ -34,6 +34,196 @@ Frontend: React + TypeScript + Vite, nach Features gegliedert.
 
 ---
 
+## Feature-Liste (Roadmap)
+
+Alle geplanten und fertigen Funktionen, nach Bereichen geordnet.
+
+- [x] fertig
+- [ ] offen – *teilweise* heisst: ein Teil ist schon umgesetzt
+- 💎 könnte später Teil eines kostenpflichtigen Angebots werden (siehe Bereich 12)
+
+### 1. Benutzer und Admin
+
+**Konten**
+
+- [x] **Anmeldung:** Jeder Benutzer hat eigene Sprachen, Ordner, Sets, Fehlerlisten und Statistiken.
+- [x] **Profil:** Name und Avatar (Symbol auf Farbe oder eigenes Foto), dazu Klassen bzw. Gruppen.
+- [ ] **Passwort vergessen:** Zurücksetzen per E-Mail-Link.
+- [ ] **E-Mail bestätigen** bei der Registrierung.
+- [ ] **Konto löschen:** Mit allen Daten, direkt im Profil (Datenschutz).
+- [ ] **Anmelden mit Google / Microsoft** (Schulkonten).
+- [ ] **Rollen:** Schüler, Lehrperson, Admin.
+- [ ] **Elternansicht:** Eltern sehen den Lernstand ihres Kindes (nur mit dessen Zustimmung).
+
+**Admin-Ansicht** 💎
+
+- [ ] **Übersicht über alle Benutzer:** Wann zuletzt geübt, Anzahl Wörter, Durchschnittsnote und Anzahl Fehlerwörter.
+- [ ] **Detailansicht pro Benutzer:** Ordner, Notenverlauf, schwierigste Wörter und Fehlerliste.
+- [ ] **Zugriff auf Lernsets:** Der Admin kann Sets eines Benutzers öffnen, kopieren und bearbeiten.
+
+**Aufgaben vom Admin („Du musst das lernen“)** 💎
+
+- [ ] **Set zuweisen:** An einen oder mehrere Benutzer, mit Fälligkeitsdatum und Mindestnote (z. B. „bis Freitag, mindestens Note 5“).
+- [ ] **Bereich „Aufgaben“ beim Benutzer:** Mit Countdown und Status (offen, begonnen, erledigt).
+- [ ] **Kontrolle für den Admin:** Wer die Aufgabe erledigt hat und mit welcher Note.
+
+**Datenschutz**
+
+- [ ] **Transparenz:** Jeder Benutzer sieht, was der Admin von ihm sehen kann. *Teilweise:* Beim Beitritt zu einer Gruppe steht, was die anderen Mitglieder sehen.
+- [ ] **Privat oder öffentlich:** Eigene Sets können privat oder öffentlich sein. *Teilweise:* Gruppen sind privat, auf Anfrage oder öffentlich.
+- [x] **Keine E-Mail-Adressen sichtbar:** Andere sehen nur Name und Avatar. Das Profilbild sehen nur Mitglieder der eigenen Gruppen.
+- [ ] **Datenschutzerklärung und Impressum** in der App.
+
+### 2. Sets, Organisation und Teilen
+
+- [x] **Sprachen → Ordner → Kapitel:** Eigene Sprachen und Ordner, Kapitel mit Seitenangaben und „alte / neue Wörter“.
+- [x] **Sets:** Eigene Wortauswahl über mehrere Ordner einer Sprache (z. B. „Prüfung Freitag“).
+- [ ] **Tags:** Sets und Wörter nach Fach, Thema, Wortart oder Prüfung ordnen.
+- [ ] **Favoriten:** Wörter mit Stern markieren und als eigene Liste üben.
+- [ ] **Suche über alle eigenen Wörter:** Quer durch alle Ordner.
+- [ ] **Suche über alle öffentlichen Sets:** Nach Sprache, Thema, Buch oder Kapitel.
+- [ ] **Übernehmen:** Ein gefundenes Set mit einem Klick in die eigenen Ordner kopieren. *Teilweise:* In Gruppen geteilte Ordner und Sets lassen sich schon übernehmen und später aktualisieren.
+- [ ] **Bewertung und Beliebtheit:** Wie oft ein Set übernommen wurde.
+- [ ] **Melden:** Unpassende öffentliche Sets melden, der Admin prüft sie.
+- [ ] **Sets teilen per Link:** Andere können ein Set öffnen und kopieren.
+- [x] **Klassen und Gruppen:** Gruppen erstellen, mit Code beitreten oder per Namen suchen (privat / auf Anfrage / öffentlich). Die Leitung teilt Ordner und Sets mit allen Mitgliedern.
+- [ ] **Gemeinsam bearbeiten:** Mehrere Personen erstellen zusammen ein Set.
+- [x] **Wörter eintippen:** Im Format `Deutsch = Fremdsprache`, mit Alternativen und Kapiteln.
+- [ ] **Import:** Sets aus Quizlet, Anki oder CSV/Excel importieren.
+- [ ] **Export:** Als CSV (Sicherung, Austausch) oder PDF (zum Ausdrucken). PDF ist 💎.
+- [x] **Alle Daten exportieren und importieren:** Als JSON-Datei.
+- [x] **Automatische Sicherungen** der Datenbank, auch vor jedem Update.
+- [ ] **Papierkorb:** Gelöschte Ordner und Sets 30 Tage lang wiederherstellen.
+
+### 3. Karten-Inhalte
+
+- [x] **Hinweis pro Wort:** z. B. „eines reicht“, wird bei der Frage angezeigt.
+- [ ] **Bilder auf Karten:** Selbst hochladen, ideal für Biologie, Geografie und zum besseren Merken. 💎 ab einer gewissen Speichermenge.
+- [ ] **Formeln (LaTeX):** Mathe- und Physikformeln schön darstellen.
+- [ ] **Audio auf Karten:** Aussprache aufnehmen oder einfügen. 💎
+- [ ] **Beispielsätze:** Pro Wort ein oder mehrere Sätze (auch per KI, siehe Bereich 8).
+- [ ] **Wortart und Grammatik:** Geschlecht, Plural, unregelmässige Verben mit Stammformen.
+
+### 4. Lern- und Spielmodi
+
+**Klassische Lernmodi**
+
+- [ ] **Karteikarten:** Karte umdrehen und selbst bewerten, auf dem Handy mit Wischen.
+- [x] **Schreib-Modus:** Antwort selbst eintippen.
+- [ ] **Multiple Choice:** Vier Antworten, eine davon richtig.
+- [ ] **Zuordnen:** Zwei Spalten, die passenden Paare verbinden, auf Zeit.
+- [ ] **Lückentext:** Beispielsatz mit Lücke für das richtige Wort.
+- [ ] **Hören und Diktat:** Die Karte wird vorgelesen (Text-to-Speech). Im Diktat schreibst du das gehörte Wort auf.
+- [ ] **Sprechen:** Antwort laut sagen, die Spracherkennung prüft sie.
+- [ ] **Prüfungsmodus / Test-Generator:** Probeprüfung aus gemischten Fragetypen, ohne Tipps und ohne „Weiss ich nicht“, mit Note am Schluss. *Teilweise:* Prüfung im Schreib-Modus mit Schweizer Note.
+- [ ] **Verb-Trainer:** Konjugationen üben (je, tu, il … / I, you, he …).
+
+**Spiele**
+
+- [ ] **Tippspiel gegen die Zeit:** Zu langsam oder falsch kostet ein Leben (3 Leben). Mit jeder richtigen Antwort wird es schneller. Highscore am Ende.
+- [ ] **60-Sekunden-Sprint:** So viele Karten wie möglich in einer Minute.
+- [ ] **Memory:** Karten aufdecken und Paare finden, mit Zeit- und Zug-Zähler.
+- [ ] **Wörter-Regen:** Wörter fallen von oben und müssen übersetzt werden, bevor sie unten ankommen.
+- [ ] **Galgenmännchen:** Die Übersetzung Buchstabe für Buchstabe erraten.
+- [ ] **Buchstabensalat:** Gemischte Buchstaben der Lösung ordnen.
+- [ ] **Duell:** Live gegen Freunde dasselbe Set spielen – wer zuerst richtig antwortet, gewinnt.
+- [ ] **Gruppen-Challenge:** Die ganze Gruppe spielt eine Woche lang gegen ein gemeinsames Ziel.
+
+**Endlos-Modus (Zufallsvoci)**
+
+- [ ] **Zufällige Wörter aus der aktuellen Sprache:** Aus allen Ordnern dieser Sprache, so viele du willst.
+- [ ] **Quelle wählbar:** Nur eigene Wörter, nur Fehlerwörter oder auch öffentliche Sets anderer.
+- [ ] **Serie und Rekord:** z. B. „37 richtig am Stück“.
+
+### 5. Abfrage und Korrektur
+
+- [x] **Richtung wählen:** Deutsch → Fremdsprache, umgekehrt oder gemischt.
+- [x] **Kapitel wählen:** Alle, nur alte, nur neue oder einzelne Kapitel.
+- [ ] **Anzahl wählen:** z. B. 20 zufällige Karten.
+- [x] **Genaue Antwortprüfung:** Gross-/Kleinschreibung ist egal. Bei „→ Deutsch“ zählen Artikel, Teilbedeutungen und optionale Klammern.
+- [ ] **Unscharfe Antwortprüfung:** Kleine Tippfehler oder Synonyme werden automatisch als richtig gewertet (abschaltbar).
+- [x] **„War doch richtig“-Knopf:** Für Tippfehler oder gültige Alternativen, die nicht erkannt wurden.
+- [x] **Fehler anzeigen:** Markierte Unterschiede und Hinweise wie „Es fehlt der Artikel „die“.“
+- [ ] **Tipp-Knopf:** Erster Buchstabe oder Anzahl Buchstaben.
+- [ ] **Sonderzeichen-Leiste:** é, è, à, ç, ñ, ü und ähnliche Zeichen.
+- [ ] **Vorlesen:** Lautsprecher-Knopf für die Aussprache.
+- [x] **Topf / Fehler-Modus:** Falsche Wörter kommen in den Topf und werden wiederholt, bis alles sitzt. Dazu kommt „Wörter, die ich nicht kann“ pro Ordner.
+- [ ] **Fehlerliste von Hand bearbeiten:** Wörter selbst hinzufügen oder entfernen.
+
+### 6. Klüger lernen
+
+- [ ] **Spaced Repetition (Lernkartei):** Karten kommen dann wieder, wenn du sie fast vergessen hast – einfach (nach 1, 3, 7 und 14 Tagen) oder mit dem SM-2-Algorithmus wie bei Anki.
+- [ ] **Schwierigkeits-Bewertung:** Nach jeder Karte „leicht / mittel / schwer“ wählen. Die Wahl beeinflusst die Wiederholung.
+- [ ] **Lernfortschritt pro Karte:** Status „neu → lernend → sicher → gemeistert“.
+- [ ] **Prüfungsdatum mit Lernplan:** Die Karten werden auf die Tage bis zur Prüfung verteilt, mit Prognose („Wenn du täglich Y lernst, kannst du bis zum X alles“). 💎
+
+### 7. Motivation
+
+- [ ] **Tagesziel:** z. B. 20 Karten pro Tag, mit Fortschrittsbalken.
+- [x] **Lernserie (Streak):** Tage am Stück geübt.
+- [ ] **Punkte (XP) und Levels:** Punkte für jede richtige Antwort, Level-Aufstiege.
+- [ ] **Abzeichen:** z. B. „100 Karten gemeistert“, „7 Tage Streak“ oder „Topf in 1 Runde leer“.
+- [ ] **Ranglisten:** Wöchentlich unter Freunden, pro Klasse oder Gruppe, auf Wunsch anonym oder ausschaltbar. *Teilweise:* Wochen-Rangliste pro Gruppe gibt es schon. Anonym und ausschaltbar fehlen noch.
+- [ ] **Konfetti:** Bei leerem Topf oder einer 6.
+- [ ] **Wort des Tages:** Auf dem Startbildschirm.
+- [ ] **Serien-Schutz:** Einen verpassten Tag „retten“. 💎
+
+### 8. KI-Funktionen
+
+- [x] **Wörter aus Buchfotos erkennen:** Mehrere Fotos nacheinander, mit Prüfen vor dem Speichern. Gratis mit Tageslimit, ohne Limit 💎.
+- [x] **„Prompt kopieren“** als Notlösung für einen beliebigen KI-Chat.
+- [ ] **KI-Kartengenerator:** Notizen, Text oder PDF hochladen, daraus werden automatisch Lernkarten erstellt. 💎
+- [ ] **Automatische Falschantworten:** Plausible Antwortmöglichkeiten für Multiple Choice.
+- [ ] **Erklär-Button:** Bei einer falschen Antwort erklärt die KI, warum die richtige Antwort stimmt. 💎
+- [ ] **Beispielsätze und Eselsbrücken:** Auf Knopfdruck für schwierige Karten. 💎
+- [ ] **Neue Wörter entdecken:** Passende neue Wörter vorschlagen, die man zu einem Ordner hinzufügen kann. 💎
+- [ ] **KI-Gesprächspartner:** Kurze Unterhaltung in der Fremdsprache mit den Wörtern aus dem Ordner. 💎
+
+### 9. Statistik und Übersicht
+
+- [ ] **Lernstatistik:** Grafiken zu Lernzeit, Trefferquote und Fortschritt. *Teilweise:* Trefferquote, Antworten heute/diese Woche und Aktivität der letzten 4 Wochen gibt es schon. Die Lernzeit fehlt noch.
+- [x] **Statistik pro Karte:** Wie oft richtig und falsch, dazu eine Liste der schwierigsten Wörter.
+- [ ] **Notenverlauf als Diagramm pro Ordner.** *Teilweise:* Den Prüfungsverlauf mit Noten gibt es schon als Liste.
+- [ ] **Kalender-Heatmap:** Wie bei GitHub, an welchen Tagen du gelernt hast. *Teilweise:* Die Aktivität der letzten 4 Wochen wird schon angezeigt.
+- [x] **Note nach Schweizer Skala** aus dem ersten Durchgang.
+- [ ] **Wochenbericht:** Zusammenfassung per E-Mail. 💎
+
+### 10. Komfort und Praktisches
+
+- [ ] **Erinnerungen / Push-Nachrichten:** „Du hast heute noch 15 Karten fällig“, „Du hast heute noch nicht geübt“ oder „Aufgabe morgen fällig“.
+- [ ] **Offline üben:** Lernen ohne Internet, die Ergebnisse werden später synchronisiert. 💎
+- [ ] **Mobile App / PWA:** Auf dem Handy wie eine echte App installierbar.
+- [x] **Handytauglich:** Die Oberfläche passt sich dem Bildschirm an.
+- [x] **Dark Mode:** Automatisch oder per Knopf.
+- [ ] **Tastaturkürzel:** Schnell lernen mit Leertaste, Pfeiltasten usw.
+- [ ] **Einstellungen:** Schriftgrösse, Zeit im Tippspiel, ob Gross- und Kleinschreibung zählt.
+- [ ] **Eigene Designs / Farbthemen.** 💎
+- [ ] **Browser-Erweiterung:** Markierte Wörter auf einer Webseite direkt als Karte speichern.
+- [ ] **Oberfläche in mehreren Sprachen** (Deutsch, Französisch, Italienisch, Englisch).
+- [ ] **Barrierefreiheit:** Bildschirmleser, hoher Kontrast, Legasthenie-Schrift.
+
+### 11. Technik und Betrieb
+
+- [x] **Datenbank mit Migrationen:** SQLite oder PostgreSQL, Updates ohne Datenverlust.
+- [x] **Automatische Tests:** Unit-, Integrations- und End-to-End-Tests auf GitHub.
+- [x] **Docker-Container** zum einfachen Online-Stellen.
+- [ ] **Online gestellt** (z. B. Fly.io) mit eigener Domain.
+- [ ] **Sicherere Anmeldung:** Token im HttpOnly-Cookie statt im Browser-Speicher.
+- [ ] **Sicherungen ausser Haus:** Automatisch in einen Cloud-Speicher kopieren.
+- [ ] **Fehler-Überwachung und Nutzungsstatistik** (datenschutzfreundlich, ohne Tracking durch Dritte).
+
+### 12. Premium-Ideen (später evtl. kostenpflichtig) 💎
+
+Die Grundfunktionen zum Lernen sollen gratis bleiben. Kosten können vor allem dort aufkommen, wo die App selbst Geld kostet: KI-Anfragen, Speicher, Server.
+
+- [ ] **Wortlet Plus (Einzelperson):** Alle KI-Funktionen ohne Tageslimit, Bilder und Audio auf Karten, Offline-Modus, PDF-Export, Serien-Schutz, eigene Designs, Wochenbericht.
+- [ ] **Wortlet für Schulen (Lizenz pro Klasse oder Schule):** Admin- und Lehrpersonen-Ansicht, Aufgaben zuweisen mit Kontrolle, Anmelden mit Schulkonto, Datenexport für Noten.
+- [ ] **Familien-Abo:** Mehrere Kinder plus Elternansicht.
+- [ ] **Bezahlung:** z. B. Stripe oder TWINT, Testphase gratis, Rabatt für Schüler.
+- [ ] **Fertige Lehrmittel-Sets:** Wortlisten zu bekannten Schulbüchern, nur mit Erlaubnis der Verlage.
+
+---
+
 ## Lokal starten
 
 ### Variante 1: Mit Docker (ein Befehl)

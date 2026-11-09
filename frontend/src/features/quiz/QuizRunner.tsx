@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { errorMessage } from "../../shared/api/client";
-import type { FolderDetail, Word } from "../folders/foldersApi";
+import type { Word } from "../folders/foldersApi";
+import { statsApi } from "../stats/statsApi";
 import type { Direction } from "./direction";
 import { closestAnswer, diffNote, diffView, formatGrade, shuffle, swissGrade, type DiffSegment } from "./logic/compare";
 import { quizApi } from "./quizApi";
@@ -20,12 +21,20 @@ type Feedback =
       solution: string;
     };
 
+/** Ein Wort mit dem Ordner, zu dem es gehört – dorthin gehen die Antworten (auch bei Sets). */
+export interface QuizWord extends Word {
+  folderId: string;
+}
+
 interface Props {
-  folder: FolderDetail;
-  words: Word[];
+  languageName: string;
+  words: QuizWord[];
   practiceMode: boolean;
   direction: Direction;
-  initialWeakCount: number;
+  /** Was geprüft wird – für den Prüfungsverlauf in der Statistik. */
+  source: { folderId: string } | { setId: string };
+  /** Anzahl „Wörter, die ich nicht kann“ im Ordner; null bei Sets (die Liste gehört zu den Ordnern). */
+  initialWeakCount: number | null;
   onMenu: () => void;
 }
 
@@ -38,26 +47,26 @@ function Segments({ list, cls }: { list: DiffSegment[]; cls: string }) {
 }
 
 /** Prüfung mit Topf: so viele Durchgänge, bis alle Wörter richtig sind. Note aus dem ersten Durchgang. */
-export function QuizRunner({ folder, words, practiceMode, direction, initialWeakCount, onMenu }: Props) {
-  const lang = folder.languageName;
+export function QuizRunner({ languageName, words, practiceMode, direction, source, initialWeakCount, onMenu }: Props) {
+  const lang = languageName;
   const [round, setRound] = useState(1);
-  const [deck, setDeck] = useState<Word[]>([]);
+  const [deck, setDeck] = useState<QuizWord[]>([]);
   const [dirs, setDirs] = useState<Array<"de" | "fx">>([]);
   const [i, setI] = useState(0);
-  const [pot, setPot] = useState<Word[]>([]);
+  const [pot, setPot] = useState<QuizWord[]>([]);
   const [firstRight, setFirstRight] = useState(0);
   const [phase, setPhase] = useState<Phase>("question");
   const [input, setInput] = useState("");
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
-  const [weakCount, setWeakCount] = useState(initialWeakCount);
+  const [weakCount, setWeakCount] = useState<number | null>(initialWeakCount);
   const total = words.length;
   const answerRef = useRef<HTMLInputElement>(null);
   const goRef = useRef<HTMLButtonElement>(null);
   const potGoRef = useRef<HTMLButtonElement>(null);
 
-  function runRound(list: Word[]) {
+  function runRound(list: QuizWord[]) {
     const d = shuffle(list);
     setDeck(d);
     setDirs(d.map(() => (direction === "mix" ? (Math.random() < 0.5 ? "de" : "fx") : direction)));
@@ -89,7 +98,7 @@ export function QuizRunner({ folder, words, practiceMode, direction, initialWeak
     setPending(true);
     setError("");
     try {
-      const r = await quizApi.answer(folder.id, {
+      const r = await quizApi.answer(word.folderId, {
         wordKey: word.key,
         direction: reverse ? "toGerman" : "toForeign",
         input: typed,
@@ -97,7 +106,7 @@ export function QuizRunner({ folder, words, practiceMode, direction, initialWeak
         round,
         practiceMode,
       });
-      setWeakCount(r.weakCount);
+      setWeakCount((c) => (c === null ? null : r.weakCount));
       if (r.correct) {
         if (round === 1) setFirstRight((x) => x + 1);
         setFeedback({
@@ -157,8 +166,8 @@ export function QuizRunner({ folder, words, practiceMode, direction, initialWeak
     });
     goRef.current?.focus();
     try {
-      const r = await quizApi.override(folder.id, { wordKey: word.key, round, practiceMode, wasWeakBefore });
-      setWeakCount(r.weakCount);
+      const r = await quizApi.override(word.folderId, { wordKey: word.key, round, practiceMode, wasWeakBefore });
+      setWeakCount((c) => (c === null ? null : r.weakCount));
     } catch (e) {
       setError(errorMessage(e));
     }
@@ -166,6 +175,13 @@ export function QuizRunner({ folder, words, practiceMode, direction, initialWeak
 
   function next() {
     if (i + 1 >= deck.length) {
+      // Nach dem ersten Durchgang steht die Note fest → im Prüfungsverlauf speichern.
+      if (round === 1)
+        void statsApi
+          .saveResult({ ...source, direction, practiceMode, wordCount: total, firstRoundCorrect: firstRight })
+          .catch(() => {
+            // Die Prüfung selbst geht auch ohne Verlaufseintrag weiter.
+          });
       setPhase(pot.length ? "pot" : "result");
     } else {
       setI(i + 1);
@@ -293,7 +309,7 @@ export function QuizRunner({ folder, words, practiceMode, direction, initialWeak
           <p className="grade" id="grade">Im ersten Durchgang: {pct} % richtig · Note {grade}</p>
           <p className="muted" id="rounds">
             {(round === 1 ? "Kein einziges Wort im Topf. Stark!" : "Du hast den Topf in " + (round - 1) + (round === 2 ? " Runde" : " Runden") + " leer gemacht.") +
-              " In „Wörter, die ich nicht kann“ sind jetzt " + weakCount + (weakCount === 1 ? " Wort." : " Wörter.")}
+              (weakCount === null ? "" : " In „Wörter, die ich nicht kann“ sind jetzt " + weakCount + (weakCount === 1 ? " Wort." : " Wörter."))}
           </p>
           <div className="row"><button type="button" className="primary" id="restart" onClick={onMenu}>Neue Prüfung</button></div>
         </section>

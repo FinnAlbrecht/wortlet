@@ -26,6 +26,10 @@ Frontend: React + TypeScript + Vite, nach Features gegliedert.
 - **Bilderkennung über OpenRouter:** Buchseiten fotografieren, mehrere Fotos nacheinander mit Fortschrittsanzeige. Die erkannten Wörter landen als Zeilen im Wörterfeld, damit du sie vor dem Speichern prüfen kannst. Limit pro Benutzer und Tag. Notlösung: **„Prompt kopieren“** für einen beliebigen KI-Chat.
 - **Daten sichern:** „Daten exportieren“ (JSON mit allen Sprachen, Ordnern und Fehlerwörtern) und „Daten importieren“ (mit Rückfrage vor dem Überschreiben).
 - **Startdaten:** Jedes neue Konto bekommt den Ordner „Einkaufen & Ernährung“ (Englisch, 9 Kapitel, 319 Wörter, mit „Alte Wörter (S. 201–215)“ / „Neue Wörter (S. 216–225)“).
+- **Profil:** Name und Avatar – ein Symbol auf Farbe oder ein eigenes Foto (wird im Browser quadratisch auf 256 px verkleinert; sehen können es nur Mitglieder der eigenen Gruppen).
+- **Sets:** Eigene Wortauswahl innerhalb einer Sprache, auch über mehrere Ordner (z. B. „Prüfung Freitag“). Sets verweisen auf die Wörter im Ordner: Korrekturen wirken sofort, gelöschte Wörter fallen weg. Antworten zählen für die Fehlerliste des jeweiligen Ordners.
+- **Statistik:** Lernserie (Tage in Folge), Antworten heute/diese Woche, Trefferquote, Aktivität der letzten 4 Wochen, die schwierigsten Wörter und der Prüfungsverlauf mit Note (gespeichert nach dem ersten Durchgang). Tage zählen nach Schweizer Zeit.
+- **Gruppen:** Jeder kann eine Gruppe erstellen (wird Leitung). Drei Arten: **Privat** (Standard; nicht in der Suche, nur per Code), **Auf Anfrage** (in der Namenssuche; die Leitung nimmt Anfragen an oder lehnt ab) und **Öffentlich** (in der Namenssuche; direkt beitreten). Mit dem 8-stelligen Code tritt man jeder Gruppe direkt bei. Mitglieder sehen eine Wochen-Rangliste (Name, Avatar, geübte Wörter, Lernserie – keine E-Mail-Adressen). Die Leitung teilt Ordner und Sets; Mitglieder übernehmen sie als eigene Kopie und können sie später aktualisieren.
 - Karopapier-Design, Hell-/Dunkelmodus (automatisch oder per Knopf), handytauglich.
 
 ---
@@ -133,6 +137,8 @@ dotnet ef migrations add NameDerAenderung --project src/Wortlet.Infrastructure -
 ## Daten und Sicherungen
 
 Alle Daten (Konten, Sprachen, Ordner, Wörter, Fehlerwörter) liegen in einer SQLite-Datenbank `wortlet.db` im Datenordner (lokal `backend/src/Wortlet.Api/data/`, in Docker das Volume `wortlet-data`). Passwörter werden nur als Hash gespeichert (ASP.NET Identity, PBKDF2).
+
+**Datenbank-Updates:** Änderungen am Datenmodell laufen über EF-Core-Migrationen und werden beim Start automatisch eingespielt. Datenbanken aus Versionen vor den Migrationen werden erkannt und übernommen, ohne Daten zu verlieren.
 
 **Automatische Sicherungen:** Die App kopiert die Datenbank beim Start (falls die letzte Sicherung älter als das Intervall ist) und danach alle 24 Stunden – im laufenden Betrieb und immer in sich stimmig (SQLite-Online-Backup). Zusätzlich wird vor jedem Update, das die Tabellen ändert, eine Sicherung `…-vor-update.db` angelegt. Die neuesten 14 Sicherungen bleiben liegen.
 

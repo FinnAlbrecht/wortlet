@@ -4,7 +4,7 @@ import { PageHeader } from "../../shared/ui/PageHeader";
 import { useAsync } from "../../shared/ui/useAsync";
 import { readDirection, saveDirection, type Direction } from "../quiz/direction";
 import { ExamSetup } from "../quiz/ExamSetup";
-import { QuizRunner } from "../quiz/QuizRunner";
+import { QuizRunner, type QuizWord } from "../quiz/QuizRunner";
 import { WeakWordsCard } from "../weak-words/WeakWordsCard";
 import { foldersApi, type Word } from "./foldersApi";
 
@@ -14,7 +14,7 @@ const RULES_CUSTOM = "Gross- und Kleinschreibung ist egal. Sonst muss alles gena
 
 interface Session {
   id: number;
-  words: Word[];
+  words: QuizWord[];
   practiceMode: boolean;
 }
 
@@ -49,7 +49,7 @@ export function FolderPage() {
 
   function start(words: Word[], practiceMode: boolean) {
     if (!words.length) return;
-    setSession({ id: Date.now(), words, practiceMode });
+    setSession({ id: Date.now(), words: words.map((w) => ({ ...w, folderId })), practiceMode });
     window.scrollTo(0, 0);
   }
 
@@ -65,8 +65,9 @@ export function FolderPage() {
       {session ? (
         <QuizRunner
           key={session.id}
-          folder={folder}
+          languageName={folder.languageName}
           words={session.words}
+          source={{ folderId: folder.id }}
           practiceMode={session.practiceMode}
           direction={direction}
           initialWeakCount={folder.weakWords.length}

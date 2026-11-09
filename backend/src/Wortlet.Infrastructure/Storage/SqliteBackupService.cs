@@ -54,6 +54,11 @@ public sealed class SqliteBackupService(
             await source.OpenAsync(ct);
             await destination.OpenAsync(ct);
             source.BackupDatabase(destination);
+
+            // Die Kopie übernimmt sonst den WAL-Modus und legt beim Öffnen -wal/-shm-Dateien an.
+            await using var journal = destination.CreateCommand();
+            journal.CommandText = "PRAGMA journal_mode=DELETE;";
+            await journal.ExecuteNonQueryAsync(ct);
         }
 
         // Erst umbenennen, wenn die Kopie fertig ist – so liegt nie eine halbe Sicherung im Ordner.
@@ -69,7 +74,10 @@ public sealed class SqliteBackupService(
     /// <summary>Alle Sicherungen, neueste zuerst.</summary>
     public IReadOnlyList<string> ListBackups() =>
         Directory.Exists(BackupDirectory)
-            ? Directory.GetFiles(BackupDirectory, FilePrefix + "*.db").OrderByDescending(Path.GetFileName, StringComparer.Ordinal).ToList()
+            ? Directory.GetFiles(BackupDirectory, FilePrefix + "*.db")
+                .Where(f => f.EndsWith(".db", StringComparison.OrdinalIgnoreCase))
+                .OrderByDescending(Path.GetFileName, StringComparer.Ordinal)
+                .ToList()
             : [];
 
     private void Prune()

@@ -1,6 +1,7 @@
 using Wortlet.Application.Common;
 using Wortlet.Application.Languages;
 using Wortlet.Application.Quiz;
+using Wortlet.Application.Statistics;
 using Wortlet.Domain.Languages;
 using Wortlet.Domain.Vocabulary;
 using Wortlet.UnitTests.TestDoubles;
@@ -11,6 +12,7 @@ public class LanguageAndQuizServiceTests
 {
     private readonly InMemoryLanguages _languages = new();
     private readonly InMemoryFolders _folders = new();
+    private readonly InMemoryStatistics _stats = new();
     private readonly FakeUnitOfWork _uow = new();
     private readonly FakeCurrentUser _user = new(TestData.Owner);
     private readonly FakeClock _clock = new();
@@ -54,7 +56,7 @@ public class LanguageAndQuizServiceTests
         var folder = Wortlet.Domain.Folders.Folder.Create(TestData.Owner, TestData.LanguageId, "F",
             VocabularyText.Parse("die Sahne = cream\nder Rahm = cream").Chapters, TestData.Now);
         _folders.Add(folder);
-        var quiz = new QuizService(_folders, _uow, _user, _clock);
+        var quiz = new QuizService(_folders, _uow, new StatisticsService(_stats, _folders, new InMemoryWordSets(), _uow, _user, _clock), _user, _clock);
 
         var wrong = await quiz.SubmitAsync(folder.Id, new SubmitAnswerRequest("die Sahne", QuizDirection.ToForeign, "creme", false, 1, false));
         Assert.False(wrong.Correct);

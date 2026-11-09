@@ -6,13 +6,15 @@ namespace Wortlet.IntegrationTests;
 
 public class BackupTests(WortletFactory factory) : IClassFixture<WortletFactory>
 {
-    private static long Scalar(string file, string sql)
+    private static long Scalar(string file, string sql) => Scalar<long>(file, sql);
+
+    private static T Scalar<T>(string file, string sql)
     {
         using var connection = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = file, Pooling = false, Mode = SqliteOpenMode.ReadOnly }.ToString());
         connection.Open();
         using var command = connection.CreateCommand();
         command.CommandText = sql;
-        return (long)command.ExecuteScalar()!;
+        return (T)command.ExecuteScalar()!;
     }
 
     [Fact]
@@ -27,6 +29,8 @@ public class BackupTests(WortletFactory factory) : IClassFixture<WortletFactory>
         Assert.False(File.Exists(file + ".tmp"));
         Assert.Equal(1, Scalar(file, $"SELECT COUNT(*) FROM AspNetUsers WHERE Email = '{email}'"));
         Assert.True(Scalar(file, "SELECT COUNT(*) FROM Words") >= 319);
+        Assert.Equal("delete", Scalar<string>(file, "PRAGMA journal_mode"));
+        Assert.False(File.Exists(file + "-wal")); // eine einzelne, eigenständige Datei
     }
 
     [Fact]

@@ -1,5 +1,6 @@
 using Wortlet.Application.Common;
 using Wortlet.Application.Onboarding;
+using Wortlet.Application.Profiles;
 
 namespace Wortlet.Application.Auth;
 
@@ -7,6 +8,7 @@ public sealed class AuthService(
     IIdentityService identity,
     ITokenService tokens,
     OnboardingService onboarding,
+    ProfileService profiles,
     ICurrentUser currentUser)
 {
     public async Task<AuthResponse> RegisterAsync(RegisterRequest request, CancellationToken ct = default)
@@ -17,7 +19,8 @@ public sealed class AuthService(
             throw new ValidationException(string.Join(" ", result.Errors.Distinct()),
                 new Dictionary<string, string[]> { ["email"] = result.Errors.Distinct().ToArray() });
 
-        // Jeder neue Benutzer bekommt den Ordner „Einkaufen & Ernährung“.
+        // Jeder neue Benutzer bekommt ein Profil (Name aus der E-Mail-Adresse) und den Ordner „Einkaufen & Ernährung“.
+        await profiles.EnsureAsync(userId, ct);
         await onboarding.SeedNewUserAsync(userId, ct);
         return Issue(userId, email);
     }

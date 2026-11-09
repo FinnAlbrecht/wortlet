@@ -1,4 +1,5 @@
 using Wortlet.Application.Common;
+using Wortlet.Application.Statistics;
 using Wortlet.Domain.Common;
 using Wortlet.Domain.Folders;
 using Wortlet.Domain.Vocabulary;
@@ -12,6 +13,7 @@ namespace Wortlet.Application.Quiz;
 public sealed class QuizService(
     IFolderRepository folders,
     IUnitOfWork unitOfWork,
+    StatisticsService statistics,
     ICurrentUser currentUser,
     IClock clock)
 {
@@ -22,6 +24,7 @@ public sealed class QuizService(
         var all = folder.AllWords.ToList();
         var evaluation = AnswerEvaluator.Evaluate(word, all, request.Direction, request.Input, request.Skipped);
         var wasWeak = folder.RecordAnswer(word.Key, evaluation.IsCorrect, request.Round, request.PracticeMode, clock.UtcNow);
+        await statistics.RecordAnswerAsync(folder.Id, word.Key, evaluation.IsCorrect, ct);
         await unitOfWork.SaveChangesAsync(ct);
         return new AnswerResultDto(evaluation.IsCorrect, evaluation.AcceptedAnswers, evaluation.Solution, wasWeak, folder.WeakWords.Count);
     }
@@ -30,6 +33,7 @@ public sealed class QuizService(
     {
         var folder = await Load(folderId, ct);
         Run(() => { folder.OverrideAsCorrect(request.WordKey, request.Round, request.PracticeMode, request.WasWeakBefore); return 0; });
+        await statistics.OverturnAsync(folder.Id, request.WordKey, ct);
         await unitOfWork.SaveChangesAsync(ct);
         return new WeakCountDto(folder.WeakWords.Count);
     }

@@ -24,6 +24,7 @@ internal sealed class FolderConfiguration : IEntityTypeConfiguration<Folder>
         b.Ignore(f => f.WordCount);
 
         b.HasIndex(f => new { f.OwnerId, f.LanguageId });
+        b.HasIndex(f => new { f.OwnerId, f.SourceShareId });
         b.HasOne<AppUser>().WithMany().HasForeignKey(f => f.OwnerId).OnDelete(DeleteBehavior.Cascade);
         b.HasOne<Language>().WithMany().HasForeignKey(f => f.LanguageId).OnDelete(DeleteBehavior.NoAction);
 

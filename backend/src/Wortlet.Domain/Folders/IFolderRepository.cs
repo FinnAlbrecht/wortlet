@@ -19,6 +19,12 @@ public interface IFolderRepository
 
     Task<IReadOnlyList<Folder>> ListWithContentAsync(Guid ownerId, CancellationToken ct = default);
     Task<IReadOnlyList<FolderSummary>> ListSummariesAsync(Guid ownerId, Guid? languageId = null, CancellationToken ct = default);
+    /// <summary>Eigene Kopie einer Gruppenfreigabe, falls schon übernommen.</summary>
+    Task<Folder?> GetCopyOfShareAsync(Guid ownerId, Guid shareId, CancellationToken ct = default);
+
+    /// <summary>Welche dieser Freigaben schon übernommen wurden: Freigabe → eigener Ordner.</summary>
+    Task<IReadOnlyDictionary<Guid, Guid>> ListCopiedSharesAsync(Guid ownerId, IReadOnlyCollection<Guid> shareIds, CancellationToken ct = default);
+
     Task<int> CountInLanguageAsync(Guid ownerId, Guid languageId, CancellationToken ct = default);
     void Add(Folder folder);
     void Remove(Folder folder);

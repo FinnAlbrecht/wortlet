@@ -4,6 +4,7 @@ import { errorMessage } from "../../shared/api/client";
 import { ConfirmBox } from "../../shared/ui/ConfirmBox";
 import { PageHeader } from "../../shared/ui/PageHeader";
 import { useAsync } from "../../shared/ui/useAsync";
+import { setsApi } from "../sets/setsApi";
 import { languagesApi } from "./languagesApi";
 
 /** Eine Sprache mit ihren Ordnern. */
@@ -12,8 +13,8 @@ export function LanguagePage() {
   const navigate = useNavigate();
   const { data, error, loading, reload } = useAsync(
     async () => {
-      const [language, folders] = await Promise.all([languagesApi.get(languageId), languagesApi.folders(languageId)]);
-      return { language, folders };
+      const [language, folders, sets] = await Promise.all([languagesApi.get(languageId), languagesApi.folders(languageId), setsApi.list(languageId)]);
+      return { language, folders, sets };
     },
     [languageId],
   );
@@ -32,7 +33,7 @@ export function LanguagePage() {
       </>
     );
 
-  const { language, folders } = data;
+  const { language, folders, sets } = data;
 
   async function remove() {
     setBusy(true);
@@ -108,6 +109,25 @@ export function LanguagePage() {
         </div>
         <div className="row">
           <button type="button" className="primary" id="newfolder" onClick={() => navigate(`/languages/${language.id}/new`)}>+ Neuer Ordner</button>
+        </div>
+      </section>
+
+      <section className="card" id="sets">
+        <div className="label">Deine Sets</div>
+        <p className="muted">Ein Set ist deine eigene Auswahl an Wörtern, auch aus mehreren Ordnern – z. B. alles für die nächste Prüfung.</p>
+        <div className="folderlist" id="setlist">
+          {sets.map((s) => (
+            <button type="button" key={s.id} className="folder" id={`set-${s.id}`} onClick={() => navigate(`/sets/${s.id}`)}>
+              <span className="seticon" aria-hidden="true">★</span>
+              <span className="fbody">
+                <span className="fname">{s.name}</span>
+                <span className="fmeta">{s.wordCount} Wörter</span>
+              </span>
+            </button>
+          ))}
+        </div>
+        <div className="row">
+          <button type="button" className="ghost" id="newset" disabled={folders.length === 0} onClick={() => navigate(`/languages/${language.id}/sets/new`)}>+ Neues Set</button>
         </div>
       </section>
     </>

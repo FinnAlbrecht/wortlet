@@ -76,5 +76,15 @@ export async function api<T>(path: string, options: RequestOptions = {}): Promis
   return data as T;
 }
 
+/** Lädt eine Datei mit Anmeldung (z. B. ein Avatar-Bild – ein normales <img> schickt kein Token mit). */
+export async function apiBlob(path: string, signal?: AbortSignal): Promise<Blob> {
+  const headers: Record<string, string> = {};
+  const token = tokenProvider();
+  if (token) headers.Authorization = `Bearer ${token}`;
+  const response = await fetch(path, { headers, signal });
+  if (!response.ok) throw new ApiError(fallbackMessage(response.status), response.status);
+  return response.blob();
+}
+
 export const errorMessage = (e: unknown): string =>
   e instanceof ApiError ? e.message : e instanceof Error ? e.message : "Unbekannter Fehler.";

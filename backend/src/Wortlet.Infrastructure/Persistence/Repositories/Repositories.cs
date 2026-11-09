@@ -50,6 +50,20 @@ internal sealed class FolderRepository(AppDbContext db) : IFolderRepository
             .ToListAsync(ct);
     }
 
+    public Task<Folder?> GetCopyOfShareAsync(Guid ownerId, Guid shareId, CancellationToken ct = default) =>
+        WithContent().FirstOrDefaultAsync(f => f.OwnerId == ownerId && f.SourceShareId == shareId, ct);
+
+    public async Task<IReadOnlyDictionary<Guid, Guid>> ListCopiedSharesAsync(Guid ownerId, IReadOnlyCollection<Guid> shareIds, CancellationToken ct = default)
+    {
+        if (shareIds.Count == 0) return new Dictionary<Guid, Guid>();
+        var ids = shareIds.Select(id => (Guid?)id).ToList();
+        var rows = await db.Folders
+            .Where(f => f.OwnerId == ownerId && ids.Contains(f.SourceShareId))
+            .Select(f => new { ShareId = f.SourceShareId!.Value, f.Id })
+            .ToListAsync(ct);
+        return rows.GroupBy(r => r.ShareId).ToDictionary(g => g.Key, g => g.First().Id);
+    }
+
     public Task<int> CountInLanguageAsync(Guid ownerId, Guid languageId, CancellationToken ct = default) =>
         db.Folders.CountAsync(f => f.OwnerId == ownerId && f.LanguageId == languageId, ct);
 

@@ -3,8 +3,12 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Wortlet.Domain.Common;
 using Wortlet.Domain.Folders;
+using Wortlet.Domain.Groups;
 using Wortlet.Domain.Languages;
+using Wortlet.Domain.Profiles;
 using Wortlet.Domain.Recognition;
+using Wortlet.Domain.Sets;
+using Wortlet.Domain.Statistics;
 using Wortlet.Infrastructure.Identity;
 
 namespace Wortlet.Infrastructure.Persistence;
@@ -20,6 +24,13 @@ public abstract class AppDbContext : IdentityDbContext<AppUser, IdentityRole<Gui
     public DbSet<Language> Languages => Set<Language>();
     public DbSet<Folder> Folders => Set<Folder>();
     public DbSet<RecognitionUsage> RecognitionUsages => Set<RecognitionUsage>();
+    public DbSet<UserProfile> Profiles => Set<UserProfile>();
+    public DbSet<AvatarImage> AvatarImages => Set<AvatarImage>();
+    public DbSet<WordStat> WordStats => Set<WordStat>();
+    public DbSet<PracticeDay> PracticeDays => Set<PracticeDay>();
+    public DbSet<QuizResult> QuizResults => Set<QuizResult>();
+    public DbSet<WordSet> WordSets => Set<WordSet>();
+    public DbSet<Group> Groups => Set<Group>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

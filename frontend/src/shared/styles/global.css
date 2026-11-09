@@ -120,3 +120,76 @@ input[type=email]:focus,input[type=password]:focus{outline:none;border-color:var
 .fb .actions{display:flex;gap:8px;flex-wrap:wrap}
 input[type=file]{font:inherit}
 a{color:var(--accent)}
+
+/* ---- Profil, Statistik, Sets, Gruppen ---- */
+.topbar{flex-direction:column;align-items:stretch}
+.toprow{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.topbar .me{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-weight:700;min-width:0;border-radius:999px;padding:2px 8px 2px 2px}
+.topbar .me:hover{background:var(--card)}
+.topbar .me:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.mainnav{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px}
+.mainnav a{flex:1;text-align:center;padding:8px 6px;border-radius:9px;font-weight:700;color:var(--muted);text-decoration:none;font-size:.9rem}
+.mainnav a:hover{color:var(--accent)}
+.mainnav a.active{background:var(--accent);color:var(--accent-ink)}
+.mainnav a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.avatar{display:inline-grid;place-items:center;flex:none;border-radius:50%;overflow:hidden;line-height:1;color:#fff;user-select:none}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.profilehead{display:flex;align-items:center;gap:16px}
+.picker{display:flex;flex-wrap:wrap;gap:8px}
+.pick input{position:absolute;opacity:0;pointer-events:none}
+.pick span{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;font-size:1.4rem;cursor:pointer;border:3px solid transparent;box-shadow:0 0 0 1px var(--line)}
+.pick input:checked+span{border-color:var(--card);box-shadow:0 0 0 3px var(--accent)}
+.pick input:focus-visible+span{outline:3px solid var(--accent);outline-offset:3px}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.tile{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.tvalue{font-family:var(--display);font-weight:800;font-size:1.5rem;line-height:1.15;font-variant-numeric:tabular-nums}
+.activity{display:flex;align-items:flex-end;gap:3px;height:110px;border-bottom:1px solid var(--line)}
+.activity .day{flex:1;height:100%;display:flex;align-items:flex-end;min-width:0}
+.activity .col{width:100%;display:flex;flex-direction:column;border-radius:3px 3px 0 0;overflow:hidden;min-height:0}
+.activity .right,.dot.right{background:var(--ok)}
+.activity .wrong,.dot.wrong{background:var(--bad);opacity:.55}
+.dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 10px;vertical-align:middle}
+.dot:first-child{margin-left:0}
+.results{display:flex;flex-direction:column;gap:8px}
+button.result{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:12px;padding:10px 12px;font-weight:400}
+button.result:hover:not(:disabled){border-color:var(--accent)}
+button.result:disabled{opacity:1;cursor:default}
+.rtitle{font-weight:700}
+.rgrade{font-family:var(--display);font-weight:800;font-size:1.4rem;min-width:2.4em;text-align:center;border-radius:10px;padding:4px 6px;font-variant-numeric:tabular-nums}
+.rgrade.good{background:var(--ok-bg);color:var(--ok)}
+.rgrade.low{background:var(--bad-bg);color:var(--bad)}
+
+.seticon{width:38px;height:38px;flex:none;display:grid;place-items:center;border-radius:10px;background:var(--pot-bg);color:var(--pot);font-size:1.3rem}
+.setfolder{border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.setfolder summary{margin-bottom:0}
+.setfolder[open] summary{margin-bottom:8px}
+.setchapter{margin-bottom:10px}
+.setchapter .chapterall{font-weight:700;background:var(--bg)}
+.setchapter .wordpick{padding-left:22px}
+.setchapter .wordpick .pg{white-space:normal;text-align:right;max-width:45%}
+.potchip.small{font-size:.7rem;padding:1px 8px;margin-left:6px;vertical-align:middle}
+
+.ranking{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.ranking li{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line)}
+.ranking li.me{background:var(--bg);border-radius:10px}
+.rank{width:1.8em;text-align:right;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums}
+.rname{font-weight:700;overflow-wrap:anywhere}
+.badge{display:inline-block;margin-left:6px;font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:1px 8px;vertical-align:middle}
+.rscore{font-family:var(--display);font-weight:800;font-size:1.3rem;font-variant-numeric:tabular-nums}
+.share{display:flex;align-items:flex-start;gap:14px;background:var(--bg);border:2px solid var(--line);border-radius:12px;padding:14px}
+.shareactions{margin-top:8px}
+.joincode{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:1.8rem;font-weight:700;letter-spacing:.12em;text-align:center;background:var(--bg);border:2px dashed var(--accent);border-radius:12px;padding:10px;margin:0}
+input.code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.1em;text-transform:uppercase}
+select{font:inherit;font-weight:400;font-size:1rem;padding:11px 12px;border:2px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);width:100%}
+select:focus{outline:none;border-color:var(--accent)}
+.list .right small{font-weight:400;color:var(--muted)}
+.shareactions{align-items:center}
+.visibility{display:flex;flex-direction:column;gap:8px}
+.visibility label{display:flex;flex-direction:column;gap:2px;padding:10px 12px 10px 40px;border:2px solid var(--line);border-radius:10px;cursor:pointer;position:relative;background:var(--bg)}
+.visibility label.on{border-color:var(--accent)}
+.visibility input{position:absolute;left:12px;top:13px;width:18px;height:18px;accent-color:var(--accent);margin:0}
+.visibility input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.vlabel{font-weight:700}
+.reqaction{text-align:right}

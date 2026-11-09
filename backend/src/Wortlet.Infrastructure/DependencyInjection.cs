@@ -12,8 +12,12 @@ using Wortlet.Application.Onboarding;
 using Wortlet.Application.Recognition;
 using Wortlet.Domain.Common;
 using Wortlet.Domain.Folders;
+using Wortlet.Domain.Groups;
 using Wortlet.Domain.Languages;
+using Wortlet.Domain.Profiles;
 using Wortlet.Domain.Recognition;
+using Wortlet.Domain.Sets;
+using Wortlet.Domain.Statistics;
 using Wortlet.Infrastructure.Identity;
 using Wortlet.Infrastructure.OpenRouter;
 using Wortlet.Infrastructure.Persistence;
@@ -67,6 +71,10 @@ public static class DependencyInjection
         services.AddScoped<ILanguageRepository, LanguageRepository>();
         services.AddScoped<IFolderRepository, FolderRepository>();
         services.AddScoped<IRecognitionUsageRepository, RecognitionUsageRepository>();
+        services.AddScoped<IProfileRepository, ProfileRepository>();
+        services.AddScoped<IStatisticsRepository, StatisticsRepository>();
+        services.AddScoped<IWordSetRepository, WordSetRepository>();
+        services.AddScoped<IGroupRepository, GroupRepository>();
         services.AddSingleton<IClock, SystemClock>();
         services.AddSingleton<IStarterContentProvider, EmbeddedStarterContentProvider>();
 

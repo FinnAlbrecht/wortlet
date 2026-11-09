@@ -30,6 +30,9 @@ public sealed class Folder : AggregateRoot<Guid>
     /// <summary>Startdaten aus dem Buch: „genau wie im Buch“, mit den Regeln für Englisch.</summary>
     public bool IsSeed { get; private set; }
 
+    /// <summary>Kopie eines Ordners/Sets, der in einer Gruppe geteilt wurde (für „Aktualisieren“).</summary>
+    public Guid? SourceShareId { get; private set; }
+
     public DateTime CreatedAt { get; private set; }
     public DateTime UpdatedAt { get; private set; }
 
@@ -68,6 +71,8 @@ public sealed class Folder : AggregateRoot<Guid>
         folder.SetContent(chapters);
         return folder;
     }
+
+    public void MarkCopiedFrom(Guid shareId) => SourceShareId = shareId;
 
     public void Rename(string name, DateTime now)
     {

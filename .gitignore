@@ -30,3 +30,6 @@ frontend/blob-report/
 *.swp
 .DS_Store
 Thumbs.db
+
+# Lokale Einstellungen von Claude Code / Werkzeugen
+.claude/

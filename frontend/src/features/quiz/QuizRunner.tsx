@@ -4,7 +4,9 @@ import type { Word } from "../folders/foldersApi";
 import { statsApi } from "../stats/statsApi";
 import type { Direction } from "./direction";
 import { closestAnswer, diffNote, diffView, formatGrade, shuffle, swissGrade, type DiffSegment } from "./logic/compare";
+import { specialCharsFor } from "./logic/specialChars";
 import { quizApi } from "./quizApi";
+import { SpecialCharBar } from "./SpecialCharBar";
 
 type Phase = "question" | "answered" | "pot" | "result";
 
@@ -245,6 +247,9 @@ export function QuizRunner({ languageName, words, practiceMode, direction, sourc
                 onChange={(e) => setInput(e.target.value)}
                 aria-label="Deine Antwort"
               />
+              {phase === "question" && (
+                <SpecialCharBar chars={specialCharsFor(lang, reverse)} inputRef={answerRef} value={input} onChange={setInput} disabled={pending} />
+              )}
               <div className="row">
                 <button type="submit" className="primary" id="go" ref={goRef} disabled={pending}>
                   {phase === "answered" ? (i === deck.length - 1 ? "Durchgang beenden" : "Weiter") : pending ? "Prüfe …" : "Prüfen"}

@@ -193,3 +193,8 @@ select:focus{outline:none;border-color:var(--accent)}
 .visibility input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .vlabel{font-weight:700}
 .reqaction{text-align:right}
+.charbar{display:flex;flex-wrap:wrap;gap:6px}
+.charkey{min-width:40px;min-height:40px;padding:4px 8px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font-size:1.05rem;font-weight:600;border-radius:8px;flex:0 0 auto}
+.charkey:hover:not(:disabled){border-color:var(--accent)}
+.charkey.shift{color:var(--muted)}
+.charkey.shift.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}

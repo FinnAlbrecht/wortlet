@@ -21,6 +21,7 @@ Frontend: React + TypeScript + Vite, nach Features gegliedert.
 - **Strenger Vergleich:** Nur Gross/Klein (sowie Leerzeichen und Apostroph-Art) ist egal. In der Richtung → Deutsch gilt: Artikel nötig, ein Teil von „das Obst, die Frucht“ reicht, Klammern sind optional, und alle deutschen Bedeutungen zählen (cream = die Sahne / der Rahm).
 - **Topf:** Falsche Wörter kommen in den Topf, der in weiteren Runden durchgearbeitet wird, bis alles richtig ist.
 - **Fehleranzeige** mit markierten Unterschieden (Du / Richtig) und Hinweisen wie „Es fehlt „to“ vor dem Verb.“, „Es fehlt der Artikel „die“.“, „Achte auf den Bindestrich.“
+- **Sonderzeichen-Leiste** unter dem Antwortfeld: Zeigt passend zur Sprache Zeichen wie é, ç, ñ oder ß (bei Englisch keine). Ein Klick fügt das Zeichen an der Cursor-Position ein, ⇧ macht das nächste Zeichen gross.
 - **„War doch richtig“**, **„Zum Menü“** und eine **Note nach Schweizer Skala** aus dem ersten Durchgang.
 - **„Wörter, die ich nicht kann“** pro Ordner: Ein Wort kommt hinein, wenn es irgendwann falsch ist, und nur heraus, wenn es im Übungsmodus im ersten Durchgang richtig ist.
 - **Bilderkennung über OpenRouter:** Buchseiten fotografieren, mehrere Fotos nacheinander mit Fortschrittsanzeige. Die erkannten Wörter landen als Zeilen im Wörterfeld, damit du sie vor dem Speichern prüfen kannst. Limit pro Benutzer und Tag. Notlösung: **„Prompt kopieren“** für einen beliebigen KI-Chat.
@@ -145,7 +146,7 @@ Alle geplanten und fertigen Funktionen, nach Bereichen geordnet.
 - [x] **„War doch richtig“-Knopf:** Für Tippfehler oder gültige Alternativen, die nicht erkannt wurden.
 - [x] **Fehler anzeigen:** Markierte Unterschiede und Hinweise wie „Es fehlt der Artikel „die“.“
 - [ ] **Tipp-Knopf:** Erster Buchstabe oder Anzahl Buchstaben.
-- [ ] **Sonderzeichen-Leiste:** é, è, à, ç, ñ, ü und ähnliche Zeichen.
+- [x] **Sonderzeichen-Leiste:** é, è, à, ç, ñ, ü und ähnliche Zeichen, passend zur Sprache, mit Umschalttaste für Grossbuchstaben.
 - [ ] **Vorlesen:** Lautsprecher-Knopf für die Aussprache.
 - [x] **Topf / Fehler-Modus:** Falsche Wörter kommen in den Topf und werden wiederholt, bis alles sitzt. Dazu kommt „Wörter, die ich nicht kann“ pro Ordner.
 - [ ] **Fehlerliste von Hand bearbeiten:** Wörter selbst hinzufügen oder entfernen.
